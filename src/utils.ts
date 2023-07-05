@@ -166,7 +166,7 @@ export function toSafeString(string: string) {
   // remove accents, umlauts, ... by their basic latin letters
   let safeString = deburr(string)
 
-  const leadingInvalidCharactersMatch = safeString.match(/^\d+[^a-zA-Z_$]*/)
+  const leadingInvalidCharactersMatch = safeString.match(/^[^a-zA-Z_$]+/)
   if (leadingInvalidCharactersMatch?.length !== undefined && leadingInvalidCharactersMatch.length > 0) {
     const match = leadingInvalidCharactersMatch[0]
     console.log(match)
