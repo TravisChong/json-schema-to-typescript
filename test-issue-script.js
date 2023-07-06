@@ -1,4 +1,4 @@
-const { compile } = require('.');
+const { compile } = require('./dist/src');
 
 const schema = {
   "title": "2022 Example Schema",
