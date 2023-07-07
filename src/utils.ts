@@ -170,7 +170,7 @@ export function toSafeString(string: string) {
   if (leadingInvalidCharactersMatch?.length !== undefined && leadingInvalidCharactersMatch.length > 0) {
     const match = leadingInvalidCharactersMatch[0]
     console.log(match)
-    safeString = safeString.slice(match.length) + match
+    safeString = safeString.slice(match.length) + '_' + match
     console.log(safeString)
   }
 
