@@ -166,12 +166,18 @@ export function toSafeString(string: string) {
   // remove accents, umlauts, ... by their basic latin letters
   let safeString = deburr(string)
 
+  // TODO:
+  // - Only number name ("1")
+  // - empty name ("")
+  // - adding underscore to end of string always
+
+  
   const leadingInvalidCharactersMatch = safeString.match(/^[^a-zA-Z_$]+/)
   if (leadingInvalidCharactersMatch?.length !== undefined && leadingInvalidCharactersMatch.length > 0) {
     const match = leadingInvalidCharactersMatch[0]
-    console.log(match)
+    console.log("Match:", match)
     safeString = safeString.slice(match.length) + '_' + match
-    console.log(safeString)
+    console.log("safeString:", safeString)
   }
 
   safeString = safeString

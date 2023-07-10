@@ -18,7 +18,8 @@ export function run() {
     t.is(generateName('Abc-de-f', usedNames), 'AbcDeF')
 
     //Work in-progress, add test cases as necessary
-    t.is(generateName('2022Abc-de-f', usedNames), 'AbcDeF_2002')
+    t.is(generateName('2022Abc-de-f', usedNames), 'AbcDeF_2022')
+    t.is(generateName('2022-05-10Abc-de-f', usedNames), '????AbcDeF_2022')
 
     // Index should increment:
     t.is(generateName('a', usedNames), 'A1')
