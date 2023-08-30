@@ -4,10 +4,17 @@
     {
         "type": "node",
         "request": "launch",
-        "name": "Launch Program",
+        "name": "Debug tests",
         "program": "${workspaceRoot}/node_modules/.bin/ava ./dist/test/test.js",
         "cwd": "${workspaceRoot}"
     },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Run test.js",
+      "program": "${workspaceRoot}/test.js",
+      "cwd": "${workspaceRoot}"
+  },
     {
       "type": "node",
       "request": "attach",
