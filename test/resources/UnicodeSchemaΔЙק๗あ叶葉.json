@@ -1,0 +1,12 @@
+{
+  "title": "Unicode Schemaខ្ញុំបានប្រើ",
+  "type": "object",
+  "properties": {
+    "আমি": {
+      "items": {
+        "type": "number"
+      },
+      "maxItems": 5
+    }
+  }
+}

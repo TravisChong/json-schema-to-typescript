@@ -2,6 +2,10 @@ export const input = {
   type: 'object',
   title: '呵呵',
   properties: {
+    'Unicode property ÄÖÉÜß 𐌼𐌰𐌲': {
+      type: 'number',
+      title: 'میں نے گوگل ٹرانسلیٹ استعمال کیا۔',
+    },
     chinese: {
       type: 'string',
       title: '哈哈'
@@ -10,12 +14,8 @@ export const input = {
       type: 'string', 
       title: '𐌼𐌰𐌲 𐌲𐌻𐌴𐍃 𐌹̈𐍄𐌰𐌽, 𐌽𐌹 𐌼𐌹𐍃 𐍅𐌿 𐌽𐌳𐌰𐌽 𐌱𐍂𐌹𐌲𐌲𐌹𐌸.'
     },
-    'non ASCII punctuation': {
-      type: 'string',
-      title: '他說：「你好!」',
-    },
     spanish: {
-      type: 'string',
+      type: 'boolean',
       title: 'Utilicé el traductor de google'
     },
     myanmar: {
@@ -100,11 +100,10 @@ export const input = {
     },     
     urdu: {
       type: 'string',
-      title: 'میں نے گوگل ٹرانسلیٹ استعمال کیا۔'
+      title: 'میں نے گوگل ٹرانسلیٹ استعمال کیا۔',
     },
-    french: {
-      type: 'string',
-      title: "j'utilise Google Traduction"
+    fileReferences: {
+      $ref: 'test/resources/UnicodeSchemaΔЙק๗あ叶葉.json',
     },
     specialSymbols: {
       type: 'string',
