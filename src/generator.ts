@@ -165,7 +165,8 @@ function generateRawType(ast: AST, options: Options): string {
   log('magenta', 'generator', ast)
 
   if (hasStandaloneName(ast)) {
-    return toSafeString(ast.standaloneName)
+    // Assume already made a safe string
+    return ast.standaloneName
   }
 
   switch (ast.type) {
@@ -347,7 +348,8 @@ function generateStandaloneInterface(ast: TNamedInterface, options: Options): st
 function generateStandaloneType(ast: ASTWithStandaloneName, options: Options): string {
   return (
     (hasComment(ast) ? generateComment(ast.comment) + '\n' : '') +
-    `export type ${toSafeString(ast.standaloneName)} = ${generateType(
+    // Assumes that ast's standaloneName has already been made to safe string
+    `export type ${ast.standaloneName} = ${generateType(
       omit<AST>(ast, 'standaloneName') as AST /* TODO */,
       options
     )}`
